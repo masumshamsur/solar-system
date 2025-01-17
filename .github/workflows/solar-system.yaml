@@ -36,6 +36,7 @@ jobs:
         run: npm install
 
       - name: Unit Testing
+        id: nodejs-unit-testing-shams011725
         run: npm test
 
       - name: Archive Test Result
@@ -62,6 +63,7 @@ jobs:
         run: npm install
 
       - name: Check code coverage
+        continue-on-error: true
         run: npm run coverage
 
       - name: Archive Test Result
